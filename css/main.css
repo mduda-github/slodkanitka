@@ -1,0 +1,155 @@
+/*1.wstawić reset*/
+
+/*nav*/
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poiret One', cursive;
+}
+
+.container {
+    max-width: 700px;
+    /*max-width: 1024px;*/
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+
+.header-bar {
+    min-height: 15px;
+    background-color: #58C9B9;
+}
+
+.nav {
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.nav-menu {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    list-style: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.nav-menu-left {
+    width: 45%;
+    float: left;
+    /*border: 1px solid black;*/
+}
+
+
+.nav-menu-center {
+    width: 10%;
+    display: inline-block;
+    /*border: 1px solid #58C9B9;*/
+    text-align: center;
+    /*margin: 0 10px;*/
+}
+
+.nav-menu-right {
+    width: 45%;
+    float: right;
+    /*border: 1px solid black;*/
+}
+
+.nav-menu-right .nav-menu-el {
+    float: left;
+    margin-right: 10px;
+}
+
+.nav-menu-left .nav-menu-el {
+    float: right;
+    margin-left: 10px;
+}
+
+.nav-menu-el {
+    margin-top: 10px;
+    display: inline;
+    cursor: pointer;
+}
+
+.nav-menu-el a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+
+
+.logo {
+    height: 3em;
+    width: 3em;
+    display: inline-block;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #58C9B9;
+
+}
+
+.logo p {
+    position: relative;
+    top: 12px;
+    left: 0px;
+    font-size: 0.9em;
+    line-height: 12px;
+
+}
+
+/*welcome banner*/
+.main-banner {
+    background-image: url("./../images/background_one.jpg");
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-filter {
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.main-banner-text {
+    color: #fff;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: flex-end;*/
+    padding-top: 8em;
+    float: left;
+    min-height: 300px;
+    width: 40%;
+    text-transform: capitalize;
+    /*border: 1px solid red;*/
+}
+
+.main-banner-text h1 {
+    font-size: 2.5em;
+}
+
+.main-banner-text p {
+    margin-top: 10px;
+}
+.main-banner-text a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+.main-banner-text a:hover {
+    color: rgba(255,255,255,0.6);
+    transition: all 300ms;
+}
+
+
+/*main info*/
+
+.main-info {
+    min-height: 20rem;
+    background-color: #58C9B9;
+}
