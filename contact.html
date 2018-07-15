@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt</title>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=latin-ext" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+    <div class="header-bar"></div>
+    <nav class="container nav">
+        <ul class="nav-menu nav-menu-left">
+            <li class="nav-menu-el"><a>Zamów</a></li>
+            <li class="nav-menu-el"><a>Wytrawności</a></li>
+            <li class="nav-menu-el"><a>Słodkości</a></li>
+        </ul>
+        <div class="nav-menu-center">
+            <div class="logo"><a href="./index.html"><p>słodka nitka</p></a></div>
+        </div>
+        <ul class="nav-menu nav-menu-right">
+            <li class="nav-menu-el"><a>Nitka</a></li>
+            <li class="nav-menu-el"><a>DIY</a></li>
+            <li class="nav-menu-el"><a>Lifestyle</a></li>
+            <li class="nav-menu-el"><a href="./contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact">
+    <div class="form-container">
+        <h1>Kontakt</h1>
+        <p>Prosimy o wybranie interesujących Państwa produktów i wypełnienie danych poniżej. Odpowiemy tak szybko, jak
+            to możliwe.</p>
+        <p>Tel. 700-800-900</p>
+        <form>
+            <div class="row">
+                <label class="form-label">
+                    Imię *
+                    <input id="name" type="text" value="" name="name">
+                </label>
+                <label class="form-label">
+                    Nazwisko *
+                    <input id="surname" type="text" value="" name="surname">
+                </label>
+            </div>
+            <label class="form-label">
+                Numer telefonu *
+                <input id="tel" type="tel" value="" name="tel">
+            </label>
+
+            <label class="form-label">
+                E-mail *
+                <input id="email" type="email" value="" name="email">
+            </label>
+
+            <label class="form-label form-checkbox-container">
+                Produkt *
+                <p>Proszę zaznaczyć interesujące Państwa produkty.</p>
+                <input type="checkbox" name="product" value="Słodkości">Słodkości<br>
+                <input type="checkbox" name="product" value="Wytrawności">Wytrawności<br>
+                <input type="checkbox" name="product" value="Nitka">Nitka<br>
+                <input type="checkbox" name="product" value="DIY">DIY<br>
+                <input type="checkbox" name="product" value="Inne">Inne<br>
+            </label>
+
+            <label class="form-label">
+                Wiadomość *
+                <p>Proszę podać dalsze informacje dotyczące wybranych produktów i wymagań.</p>
+                <textarea rows="5"></textarea>
+            </label>
+
+            <input class="form-input-submit" type="submit" value="Wyślij">
+
+
+        </form>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container">
+        <a href="https://www.instagram.com/slodka_nitka/" id="instagram"><img src="./images/instagram-logo.png"></a>
+        <ul class="nav-menu">
+            <li class="nav-menu-el"><a>FAQ</a></li>
+            <li class="nav-menu-el"><a>Prywatność</a></li>
+            <li class="nav-menu-el"><a>Kontakt</a></li>
+            <li class="nav-menu-el"><a>Złóż zamówienie</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
