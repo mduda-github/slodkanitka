@@ -1,0 +1,64 @@
+.main-instagram {
+  height: 400px;
+  color: map-get($colors, text2-color);
+  border-top: 1px solid map-get($colors, border-color-darker);
+  border-bottom: 1px solid map-get($colors, border-color-darker);
+  background-image: url("~/../../images/background_six.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 0 rgba(0,0,0,0.4);
+    padding: 20px 0;
+  }
+
+  .main-instagram-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0;
+    .main-instagram-list__el {
+      height: 250px;
+      width: 250px;
+      border: 2px solid white;
+      img {
+        height: 246px;
+        width: 246px;
+      }
+    }
+  }
+
+  .banner-filter {
+    background-color: rgba(88, 201, 185, 0.5);
+  }
+
+
+
+}
+
+
+//.main-instagram-text {
+//  /*border: 1px solid red;*/
+//  padding-top: 40px;
+//  text-align: center;
+//  color: white;
+//  font-size: 2em;
+//  text-shadow: 1px 0 rgba(0,0,0,0.4);
+//}
+//
+//.main-instagram-elements {
+//  margin: 50px 0;
+//  display: flex;
+//  flex-direction: row;
+//}
+//
+//.main-instagram-elements__el {
+//  height: 250px;
+//  width: 250px;
+//  border: 2px solid white;
+//}
+//

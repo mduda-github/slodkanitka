@@ -1,0 +1,10 @@
+.main-text2 {
+  line-height: 30px;
+  font-size: 1.8em;
+  padding: 50px 200px;
+  text-indent: 50px;
+  strong {
+    color: map-get($colors, main-color);
+    font-weight: bold;
+  }
+}

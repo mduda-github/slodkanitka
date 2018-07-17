@@ -117,7 +117,7 @@ body {
 
 /*welcome banner*/
 .main-banner {
-    background-image: url("./../images/background_one.jpg");
+    background-image: url("../../images/background_one.jpg");
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -202,7 +202,7 @@ body {
 /* main instagram*/
 
 .main-instagram {
-    background-image: url("./../images/background_six.png");
+    background-image: url("../../images/background_six.png");
     min-height: 400px;
     background-position: 0 250px;
     background-size: cover;
@@ -253,7 +253,7 @@ body {
 /* banner two */
 
 .main-banner-two {
-    background-image: url("./../images/background_two.jpg");
+    background-image: url("../../images/background_two.jpg");
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;

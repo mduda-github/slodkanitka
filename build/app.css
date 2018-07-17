@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Poiret One', cursive; }
+
+.container {
+  max-width: 1024px;
+  /*max-width: 1024px;*/
+  margin: 0 auto; }
+
+.banner-filter {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%; }
+
+.header-bar {
+  height: 15px;
+  background-color: #58C9B9; }
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  height: 200px; }
+  .header-nav div {
+    display: flex;
+    align-items: center; }
+  .header-nav a {
+    text-decoration: none;
+    color: #000000;
+    transition: all 300ms; }
+  .header-nav a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6); }
+  .header-nav .header-nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none; }
+  .header-nav .header-nav-left {
+    width: 40%;
+    justify-content: flex-end; }
+    .header-nav .header-nav-left li {
+      margin-left: 1rem; }
+  .header-nav .header-nav-right {
+    width: 40%;
+    justify-content: flex-start; }
+    .header-nav .header-nav-right li {
+      margin-right: 1rem; }
+  .header-nav .header-nav-center {
+    width: 20%;
+    justify-content: center; }
+    .header-nav .header-nav-center .logo {
+      height: 10rem;
+      width: 10rem;
+      color: #fff;
+      border-radius: 50%;
+      background-color: #58C9B9; }
+      .header-nav .header-nav-center .logo a {
+        text-decoration: none;
+        color: white; }
+      .header-nav .header-nav-center .logo a:hover {
+        border-bottom: 0; }
+      .header-nav .header-nav-center .logo p {
+        font-size: 2.8rem;
+        line-height: 40px;
+        text-align: center; }
+
+.main-banner {
+  height: 400px;
+  color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  background-image: url("/../../images/background_one.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  .main-banner .container {
+    padding-top: 120px; }
+  .main-banner h1 {
+    font-size: 4rem; }
+  .main-banner p {
+    font-size: 2em;
+    margin-top: 10px; }
+  .main-banner a {
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+    cursor: pointer; }
+  .main-banner a:hover {
+    color: #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    transition: all 300ms; }
+
+.main-text {
+  margin: 30px 0; }
+  .main-text .container {
+    display: flex; }
+  .main-text .main-text-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main-text .main-text-right .logo {
+      width: 20em;
+      height: 20em;
+      color: #fff;
+      border-radius: 50%;
+      background-color: #58C9B9; }
+      .main-text .main-text-right .logo p {
+        font-size: 4.5rem;
+        text-align: left;
+        line-height: 60px;
+        position: relative;
+        top: 150px;
+        left: 105px; }
+  .main-text .main-text-left {
+    width: 50%;
+    font-size: 1.8rem; }
+    .main-text .main-text-left strong {
+      color: #58C9B9;
+      font-weight: bold; }
+
+.main-instagram {
+  height: 400px;
+  color: #ffffff;
+  border-top: 1px solid rgba(88, 201, 185, 0.5);
+  border-bottom: 1px solid rgba(88, 201, 185, 0.5);
+  background-image: url("/../../images/background_six.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  .main-instagram h1 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 0 rgba(0, 0, 0, 0.4);
+    padding: 20px 0; }
+  .main-instagram .main-instagram-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0; }
+    .main-instagram .main-instagram-list .main-instagram-list__el {
+      height: 250px;
+      width: 250px;
+      border: 2px solid white; }
+      .main-instagram .main-instagram-list .main-instagram-list__el img {
+        height: 246px;
+        width: 246px; }
+  .main-instagram .banner-filter {
+    background-color: rgba(88, 201, 185, 0.5); }
+
+.main-text2 {
+  line-height: 30px;
+  font-size: 1.8em;
+  padding: 50px 200px;
+  text-indent: 50px; }
+  .main-text2 strong {
+    color: #58C9B9;
+    font-weight: bold; }
+
+.main-banner2 {
+  height: 400px;
+  color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  background-image: url("/../../images/background_two.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  .main-banner2 .container {
+    padding-top: 120px; }
+  .main-banner2 h1 {
+    font-size: 4rem; }
+  .main-banner2 p {
+    font-size: 2em;
+    margin-top: 10px; }
+  .main-banner2 a {
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+    cursor: pointer; }
+  .main-banner2 a:hover {
+    color: #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    transition: all 300ms; }
+
+.footer-nav {
+  height: 200px; }
+  .footer-nav .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .footer-nav .container .footer-nav-media {
+      margin: 40px 0; }
+      .footer-nav .container .footer-nav-media a {
+        margin: 0 10px; }
+        .footer-nav .container .footer-nav-media a svg {
+          fill: #58C9B9;
+          width: 50px;
+          height: 50px;
+          transition: all 300ms; }
+        .footer-nav .container .footer-nav-media a svg:hover {
+          fill: rgba(88, 201, 185, 0.5); }
+    .footer-nav .container .footer-nav-list {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5em;
+      list-style: none;
+      margin-bottom: 30px; }
+      .footer-nav .container .footer-nav-list a {
+        text-decoration: none;
+        color: #000000;
+        transition: all 300ms;
+        margin: 0 15px; }
+      .footer-nav .container .footer-nav-list a:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6); }
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto; }
+  .form-container h1 {
+    text-align: center;
+    font-size: 4em;
+    padding: 30px 0; }
+  .form-container p {
+    font-size: 1.6em;
+    padding: 20px 0;
+    line-height: 35px; }
+  .form-container form {
+    margin: 35px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .form-container form input {
+      width: 100%;
+      height: 40px;
+      font-size: 1.2em;
+      margin-top: 5px;
+      border: 1px solid rgba(88, 201, 185, 0.5);
+      background-color: rgba(88, 201, 185, 0.1);
+      border-radius: 2px;
+      padding-left: 5px; }
+  .form-container label {
+    font-size: 1.4em;
+    padding: 15px 0; }
+    .form-container label p {
+      font-size: 0.8em; }
+  .form-container textarea {
+    width: 100%;
+    border: 1px solid rgba(88, 201, 185, 0.5);
+    background-color: rgba(88, 201, 185, 0.1);
+    border-radius: 2px;
+    font-size: 1.2em;
+    padding: 5px; }
+  .form-container .row {
+    width: 100%;
+    display: flex; }
+    .form-container .row input {
+      width: 100%; }
+    .form-container .row label {
+      width: 100%; }
+    .form-container .row label:first-child {
+      margin-right: 10px; }
+  .form-container .form-checkbox-container input {
+    width: 40px;
+    margin-top: 0;
+    margin-left: 25px;
+    height: 21px; }
+  .form-container .form-input-submit {
+    width: 120px;
+    border: 2px solid #58C9B9;
+    background-color: white;
+    color: #58C9B9;
+    padding-left: 0; }
+  .form-container .form-input-submit:hover {
+    background-color: #58C9B9;
+    color: white; }
+
+.aboutus {
+  margin: 0 auto;
+  padding: 0 50px; }
+  .aboutus h1 {
+    text-align: center;
+    font-size: 4rem;
+    padding: 30px 0; }
+  .aboutus p {
+    font-size: 1.2rem;
+    text-indent: 50px;
+    line-height: 35px;
+    padding: 20px 0; }
+    .aboutus p strong {
+      color: #58C9B9;
+      font-size: 1.3rem; }
+
+.slodkosci {
+  margin: 0 auto;
+  padding: 0 50px;
+  width: 100%; }
+  .slodkosci h1 {
+    text-align: center;
+    font-size: 4rem;
+    padding: 30px 0; }
+  .slodkosci .slodkosci-posts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; }
+    .slodkosci .slodkosci-posts .slodkosci-post .slodkosci-post-img {
+      margin: 10px;
+      height: 300px;
+      width: 300px;
+      border: 2px solid #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .slodkosci .slodkosci-posts .slodkosci-post .slodkosci-post-title {
+      font-size: 20px;
+      text-align: center; }
+  .slodkosci .slodkosci-detailed-post .detailed-post-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0; }
+  .slodkosci .slodkosci-detailed-post .detailed-post-nav-left {
+    text-align: left; }
+  .slodkosci .slodkosci-detailed-post .detailed-post-nav-right {
+    text-align: right; }
+    .slodkosci .slodkosci-detailed-post .detailed-post-nav-right span {
+      margin-right: 5px; }
+  .slodkosci .slodkosci-detailed-post .detailed-post-body {
+    display: flex;
+    padding: 15px 0; }
+    .slodkosci .slodkosci-detailed-post .detailed-post-body .detailed-post-body-left {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .slodkosci .slodkosci-detailed-post .detailed-post-body .detailed-post-body-left img {
+        width: 500px;
+        height: 500px; }
+    .slodkosci .slodkosci-detailed-post .detailed-post-body .detailed-post-body-right {
+      width: 50%;
+      padding: 0 20px; }
+      .slodkosci .slodkosci-detailed-post .detailed-post-body .detailed-post-body-right h1 {
+        text-align: left;
+        padding: 0; }
+      .slodkosci .slodkosci-detailed-post .detailed-post-body .detailed-post-body-right h3 {
+        word-spacing: 20px;
+        margin: 20px 0; }
+      .slodkosci .slodkosci-detailed-post .detailed-post-body .detailed-post-body-right p {
+        margin: 20px 0;
+        font-size: 1.2rem; }
+  .slodkosci .slodkosci-detailed-post .detailed-post-footer {
+    border-bottom: 1px solid black; }
+

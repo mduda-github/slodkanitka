@@ -1,0 +1,33 @@
+.main-banner2 {
+  height: 400px;
+  color: map-get($colors, text2-color);
+  border-top: 1px solid map-get($colors, underline-color);
+  border-bottom: 1px solid map-get($colors, underline-color);
+  background-image: url("~/../../images/background_two.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .container {
+    padding-top: 120px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 2em;
+    margin-top: 10px;
+  }
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid map-get($colors, text2-color);
+    cursor: pointer;
+  }
+  a:hover {
+    color: map-get($colors, underline-color2);
+    border-bottom: 1px solid map-get($colors, underline-color2);
+    transition: all 300ms;
+  }
+}

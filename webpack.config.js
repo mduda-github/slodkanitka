@@ -1,62 +1,92 @@
-'use strict';
+var path = require("path");
+var Html = require('html-webpack-plugin');
+var MiniCSS = require("mini-css-extract-plugin");
 
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-require('es6-promise').polyfill();
+module.exports = function(env) {
+    const isDev = env && env.dev ? true : false;
+    console.log(isDev, 'isDev');
 
-module.exports = {
-    entry : {
-        'js/out.js': './js/app.js'
-    },
-
-    output:{
-        filename: '[name]',
-        path: __dirname + '/build'
-    },
-
-    devServer: {
-        inline: true,
-        contentBase: './',
-        port: 3002
-    },
-
-    plugins: [
-        new ExtractTextPlugin('./css/app.css')
-    ],
-
-    module: {
-        loaders: [
-            {
-                test: /\.jsx?$/,  exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: { presets: ['es2015', 'stage-2' , 'react'] }
-            },
-            {
-                test: /\.scss$/,
-                loader: "style-loader!css-loader?url=false!sass-loader",
-                options: {
-                    sourceMap: true
+    const config = {
+        entry: "./js/main.jsx",
+        output: {
+            filename: "out.js",
+            path: path.resolve(__dirname, "build")
+        },
+        mode: isDev ? 'development' : 'production',
+        module: {
+            rules: [
+                {
+                    test: /\.jsx$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['es2015', "stage-2", "react"]
+                        }
+                    }
+                },
+                {
+                    test: /\.css$/,
+                    use: [
+                        isDev ? 'style-loader' : MiniCSS.loader,
+                        'css-loader'
+                    ]
+                },
+                {
+                    test: /\.scss$/,
+                    use: [
+                        isDev ? 'style-loader' : MiniCSS.loader,
+                        'css-loader',
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins: () => [
+                                    new require('autoprefixer')({
+                                        browsers: [
+                                            'ie 11' // tu definiujemy wsparcie dla przegladarek w css
+                                        ]
+                                    })
+                                ]
+                            }
+                        },
+                        'sass-loader'
+                    ]
+                },
+                {
+                    test: /\.(jpg|jpeg|gif|png|csv)$/,
+                    use: {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            publicPath: 'images',
+                            outputPath: 'images'
+                        }
+                    }
+                },
+                {
+                    test: /\.(eot|ttf|woff|woff2)$/,
+                    use: {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            publicPath: 'fonts',
+                            outputPath: 'fonts'
+                        }
+                    }
                 }
-            },
-            { test: /\.svg$/, loader: 'svg-loader?pngScale=2' },
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]'
-                }
-            },
-        ],
+            ]
+        },
+        plugins: [
+            new Html({
+                filename: 'index.html',
+                template: './index.html'
+            }),
+            new MiniCSS({
+                filename: "app.css", // definiujemy adres pliku css
+            })
+        ]
+    }
 
-    },
-
-    stats: {
-        // Colored output
-        colors: true
-    },
-
-    // Create Sourcemaps for the bundle
-    devtool: 'source-map'
-};
+    return config;
+}
