@@ -1,21 +1,22 @@
 import React from 'react';
 
+
 class MainText extends React.Component {
     render() {
         return <div className="main-text">
             <div className="container">
                 <div className="main-text-right">
                     <div className="logo">
-                        <p>słodka <br/> nitka</p>
+                        <img src="./../../../images/logo.png"/>
                     </div>
                 </div>
                 <div className="main-text-left">
-                    <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit. Architecto asperiores
-                    atque dolorum eligendi enim error facilis labore maxime provident sit. Cupiditate doloremque error
-                    illo mollitia nulla odio temporibus unde voluptas? <strong>Lorem ipsum</strong> dolor sit amet,
-                    consectetur adipisicing elit. Cum dolores eius inventore maiores minus, necessitatibus obcaecati
-                    officia pariatur saepe tempora! Cum dolores eius inventore maiores minus, necessitatibus obcaecati
-                    officia pariatur saepe tempora!
+                    Jest taki rodzaj szczęścia, którego nie sposób pomieścić. To satysfakcja, spełnienie, pasja, dobro
+                    rozlewające się tak bardzo, że chce się o nim mówić i dzielić z innymi. Stąd właśnie <strong>Słodka
+                    Nitka</strong> - blog, który ma pomieścić choć część tego, co się z nas wylewa - doświadczenia
+                    płynącego z sukcesów i porażek, doznanych podczas godzin spędzonych w kuchni i przy maszynie do
+                    szycia. Tu znajdziesz kawałek naszego życia, gdzie smaki przeplatają się z refleksjami nad prozą
+                    życia, a spod igły i rąk wychodzą małe dzieła.
                 </div>
             </div>
         </div>

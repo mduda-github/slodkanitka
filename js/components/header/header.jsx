@@ -16,18 +16,19 @@ class Header extends React.Component {
                 <div className="header-nav">
                     <div className="header-nav-left">
                         <ul className="header-nav-list">
-                            <li><Link to="/slodkosci">Słodkości</Link></li>
-                            <li><a href="#">Wytrawności</a></li>
+                            <li><Link to="/slodkosci">Słodkości</Link><div className='linkUnderline'></div></li>
+                            <li><Link to="/wytrawnosci">Wytrawności</Link><div className='linkUnderline'></div></li>
                         </ul>
                     </div>
                     <div className="header-nav-center">
-                        <div className="logo"><a href="#"><p>słodka nitka</p></a></div>
+                        <div className="logo"><Link to='/'><img src="./../../../images/logo.png"/></Link></div>
                     </div>
                     <div className="header-nav-right">
                         <ul className="header-nav-list">
-                            <li><a href="#">Nitka</a></li>
-                            <li><a href="#">DIY</a></li>
-                            <li><a href="#">Lifestyle</a></li>
+                            <li><Link to="/nitka">Nitka</Link><div className='linkUnderline'></div></li>
+                            <li><Link to="/diy">DIY</Link><div className='linkUnderline'></div></li>
+                            <li><Link to="/lifestyle">Lifestyle</Link><div className='linkUnderline'></div></li>
+                            <li><Link to="/blog">Blog</Link><div className='linkUnderline'></div></li>
                         </ul>
                     </div>
                 </div>

@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+} from 'react-router-dom';
 
 class MainBanner2 extends React.Component {
     render() {
@@ -6,7 +13,7 @@ class MainBanner2 extends React.Component {
             <div className="banner-filter">
                 <div className="container">
                     <h1>Zobacz co <br/>uszyłyśmy...</h1>
-                    <p>Poznaj nasze <a>ubranka dla dzieci</a> i <a>akcesoria</a></p>
+                    <p>Poznaj nasze <Link to='/nitka'>ubranka dla dzieci</Link> i <Link to='/nitka'>akcesoria</Link></p>
                 </div>
             </div>
         </div>

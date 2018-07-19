@@ -6,6 +6,7 @@ import {MainText2} from './main-text2.jsx'
 import {MainBanner2} from './main-banner2.jsx'
 
 
+
 class Body extends React.Component {
     render() {
         return <div>

@@ -25,18 +25,17 @@ class Footer extends React.Component {
                                 d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/>
                         </svg>
                     </a>
-                    <a href="#" id="kontakt">
+                    <Link to="/contact" id="kontakt">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path
                                 d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
                 <ul className="footer-nav-list">
-                    <li><Link to="/aboutus">O nas</Link></li>
-                    <li><a>Prywatność</a></li>
-                    <li><Link to="/contact">Kontakt</Link></li>
-                    <li><a>Złóż zamówienie</a></li>
+                    <li><Link to="/aboutus">O nas</Link><div className='linkUnderline'></div></li>
+                    <li><a>Prywatność</a><div className='linkUnderline'></div></li>
+                    <li><Link to="/contact">Kontakt</Link><div className='linkUnderline'></div></li>
                 </ul>
             </div>
         </footer>

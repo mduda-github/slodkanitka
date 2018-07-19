@@ -10,26 +10,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      width: 100%;
+    }
     .logo {
       width: 20em;
       height: 20em;
-      color: #fff;
-      border-radius: 50%;
-      background-color: map-get($colors, main-color);
-      p {
-        font-size: 4.5rem;
-        text-align: left;
-        line-height: 60px;
-        position: relative;
-        top: 150px;
-        left: 105px;
+      img {
+        transition: all 300ms;
+        transform: rotate(5deg);
+      }
+      img:scroll {
+        transform: rotate(0deg);
       }
     }
   }
 
   .main-text-left {
     width: 50%;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    text-indent: 50px;
+    text-align: justify;
+    padding: 10px 20px;
     strong {
       color: map-get($colors, main-color);
       font-weight: bold;
