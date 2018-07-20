@@ -11,7 +11,10 @@ class MainBanner extends React.Component {
     render() {
         return <div className="main-banner">
             <div className="banner-filter">
-                <div className="container">
+                <div data-aos="fade-up"
+                     data-aos-delay="500"
+                     data-aos-easing="ease-in-sine"
+                     className="container">
                     <h1>Witaj na <br/>SłodkaNitka</h1>
                     <p>Poznaj nasze <Link to="/slodkosci">słodkości</Link>, <Link to='/wytrawnosci'>wytrawności</Link><br/> oraz <Link to='nitka'>nitki</Link></p>
                 </div>

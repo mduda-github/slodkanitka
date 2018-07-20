@@ -8,7 +8,13 @@ import {
 } from 'react-router-dom';
 
 
+
 class ContactSection extends React.Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return <section>
             <div className="form-container">

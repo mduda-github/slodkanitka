@@ -13,7 +13,7 @@ class MainBanner2 extends React.Component {
             <div className="banner-filter">
                 <div className="container">
                     <h1>Zobacz co <br/>uszyłyśmy...</h1>
-                    <p>Poznaj nasze <Link to='/nitka'>ubranka dla dzieci</Link> i <Link to='/nitka'>akcesoria</Link></p>
+                    <p>Poznaj nasze <Link to='/nitka'>ubranka dla dzieci</Link> i <Link to='/diy'>DIY</Link></p>
                 </div>
             </div>
         </div>

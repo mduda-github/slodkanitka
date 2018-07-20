@@ -14,7 +14,10 @@ class Header extends React.Component {
             <div className="header-bar"></div>
             <nav className="container">
                 <div className="header-nav">
-                    <div className="header-nav-left">
+                    <div data-aos="fade-left"
+                         data-aos-offset="300"
+                         data-aos-easing="ease-in-sine"
+                         className="header-nav-left">
                         <ul className="header-nav-list">
                             <li><Link to="/slodkosci">Słodkości</Link><div className='linkUnderline'></div></li>
                             <li><Link to="/wytrawnosci">Wytrawności</Link><div className='linkUnderline'></div></li>
@@ -24,7 +27,10 @@ class Header extends React.Component {
                         <div className="logo"><Link to='/'><img src="./../../../images/logo.png"/></Link></div>
                     </div>
                     <div className="header-nav-right">
-                        <ul className="header-nav-list">
+                        <ul data-aos="fade-right"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine"
+                            className="header-nav-list">
                             <li><Link to="/nitka">Nitka</Link><div className='linkUnderline'></div></li>
                             <li><Link to="/diy">DIY</Link><div className='linkUnderline'></div></li>
                             <li><Link to="/lifestyle">Lifestyle</Link><div className='linkUnderline'></div></li>

@@ -12,6 +12,10 @@ const Storyblok = new StoryblokClient({
     accessToken: 'sjm4QbxjgLxrtXx3V28xawtt'
 });
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 import {Header} from './header/header.jsx'
 import {Body} from './body/main-page.jsx'
 import {Footer} from './footer/footer.jsx'
@@ -29,127 +33,6 @@ import {BlogSection} from './body/section-blog.jsx'
 
 import {SlodkosciDetailedPost} from './body/section-slodkosci-post.jsx'
 
-
-
-class Main extends React.Component {
-    render() {
-        return <div>
-            <Header />
-            <Body />
-            <Footer />
-        </div>
-    }
-}
-
-class Slodkosci extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <div>
-            <Header />
-            <SlodkosciDetailedPost data={this.props.data}/>
-            <SlodkosciSection data={this.props.data}/>
-            <Footer />
-        </div>;
-    }
-}
-
-class Wytrawnosci extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <div>
-            <Header />
-            <WytrawnosciSection data={this.props.data}/>
-            <Footer />
-        </div>;
-    }
-}
-
-class Nitka extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <div>
-            <Header />
-            <NitkaSection data={this.props.data}/>
-            <Footer />
-        </div>;
-    }
-}
-
-class Diy extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <div>
-            <Header />
-            <DiySection data={this.props.data}/>
-            <Footer />
-        </div>;
-    }
-}
-
-class Lifestyle extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <div>
-            <Header />
-            <LifestyleSection data={this.props.data}/>
-            <Footer />
-        </div>;
-    }
-}
-
-class Blog extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <div>
-            <Header />
-            <SlodkosciDetailedPost data={this.props.data}/>
-            <BlogSection data={this.props.data}/>
-            <Footer />
-        </div>;
-    }
-}
-
-class AboutUs extends React.Component {
-    render() {
-        return <div>
-            <Header />
-            <AboutUsSection />
-            <Footer />
-        </div>;
-    }
-}
-
-class Contact extends React.Component {
-    render() {
-        return <div>
-            <Header />
-            <ContactSection />
-            <Footer />
-        </div>;
-    }
-}
-
-class NotFound extends React.Component {
-    render() {
-        return <div>
-            <Header />
-            <Main404 />
-            <Footer />
-        </div>;
-    }
-}
 
 class App extends React.Component {
     constructor(props) {
@@ -171,19 +54,29 @@ class App extends React.Component {
     render() {
         // console.log(this.state.data);
         return <HashRouter>
+            <div>
+                <Header />
             <Switch>
-                <Route exact path='/' component={Main} />
-                <Route path='/blog' component={() => <Blog data={this.state.data}/>} />
-                <Route path='/contact' component={Contact} />
-                <Route path='/aboutus' component={AboutUs} />
-                <Route path='/slodkosci' component={() => <Slodkosci data={this.state.data}/>} />
-                <Route path='/slodkosci/:postId' compoment={Contact}/>
-                <Route path='/wytrawnosci' component={() => <Wytrawnosci data={this.state.data}/>}/>
-                <Route path='/nitka' component={() => <Nitka data={this.state.data}/>}/>
-                <Route path='/diy' component={() => <Diy data={this.state.data}/>}/>
-                <Route path='/lifestyle' component={() => <Lifestyle data={this.state.data}/>}/>
-                <Route component={NotFound} />
+                <Route exact path='/' component={Body} />
+                <Route path='/blog' component={() => <BlogSection data={this.state.data}/>} />
+                <Route path='/contact' component={ContactSection} />
+                <Route path='/aboutus' component={AboutUsSection} />
+
+                <Route path='/slodkosci' component={(props) => <SlodkosciSection
+                    routerProps={props.match}
+                    data={this.state.data}/>} />
+
+                <Route path="/slodkosci/:id" component={ () => {
+                    return <SlodkosciDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
+
+                <Route path='/wytrawnosci' component={() => <WytrawnosciSection data={this.state.data}/>}/>
+                <Route path='/nitka' component={() => <NitkaSection data={this.state.data}/>}/>
+                <Route path='/diy' component={() => <DiySection data={this.state.data}/>}/>
+                <Route path='/lifestyle' component={() => <LifestyleSection data={this.state.data}/>}/>
+                <Route component={Main404} />
             </Switch>
+                <Footer />
+            </div>
         </HashRouter>
     }
 }

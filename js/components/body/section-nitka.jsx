@@ -7,6 +7,9 @@ class NitkaPosts extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
 
     render() {
         const sorted = [];
@@ -16,7 +19,10 @@ class NitkaPosts extends React.Component {
         });
         const posts = sorted.length > 0 &&
             sorted.map( (elem, i) => {
-                return <div className="slodkosci-post" key={i}>
+                return <div data-aos="zoom-in"
+                            data-aos-duration={600 + i*300}
+                            data-aos-easing="ease-in-sine"
+                            className="slodkosci-post" key={i}>
                     <img className="slodkosci-post-img"
                          src={elem.content.image}/>
                     <div className="slodkosci-post-title">{elem.content.title_image}</div>
