@@ -58,7 +58,13 @@ class App extends React.Component {
                 <Header />
             <Switch>
                 <Route exact path='/' component={Body} />
-                <Route path='/blog' component={() => <BlogSection data={this.state.data}/>} />
+                <Route path='/blog' component={(props) => <SlodkosciSection
+                    routerProps={props.match}
+                    data={this.state.data}/>} />
+
+                <Route path="/blog/:id" component={ () => {
+                    return <SlodkosciDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
+
                 <Route path='/contact' component={ContactSection} />
                 <Route path='/aboutus' component={AboutUsSection} />
 
