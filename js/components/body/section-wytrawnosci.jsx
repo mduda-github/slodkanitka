@@ -1,15 +1,34 @@
 import React from 'react';
+import {WytrawnosciDetailedPost} from './section-wytrawnosci-post.jsx';
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+} from 'react-router-dom';
 
-
-class WytrawnosciPosts extends React.Component {
-
+class WytrawnosciSection extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            indexClicked: '0',
+            galleryOnOff: true
+        }
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
     }
+
+    handleClick = (e, index) => {
+        this.setState({
+            indexClicked: index,
+            galleryOnOff: false
+        });
+        return <div/>
+    };
+
     render() {
         const sorted = [];
         this.props.data.length > 0 &&
@@ -22,27 +41,20 @@ class WytrawnosciPosts extends React.Component {
                             data-aos-duration={600 + i*300}
                             data-aos-easing="ease-in-sine"
                             className="slodkosci-post" key={i}>
-                    <img className="slodkosci-post-img"
-                         src={elem.content.image}
-                         onClick={e => this.handleClick(e, i)}/>
-                    <div className="slodkosci-post-title">{elem.content.title_image}</div>
+                    <Link to={`${this.props.routerProps.url}/${elem.content.title_post}`}>
+                        <img className="slodkosci-post-img"
+                             src={'https://' + elem.content.image}
+                             onClick={e => this.handleClick(e, i)}/>
+                        <div className="slodkosci-post-title">{elem.content.title_image}</div>
+                    </Link>
                 </div>
             });
-
-        return <div className="slodkosci-posts">{posts}</div>
-
-    }
-}
-
-class WytrawnosciSection extends React.Component {
-
-    render() {
-
         return <section className="slodkosci">
-            <div className="container">
-                <h1>Nasze wytrawności</h1>
-                <WytrawnosciPosts data={this.props.data}/>
-            </div>
+                <h1><Link to="/wytrawnosci">Nasze wytrawności</Link></h1>
+                {this.state.galleryOnOff ? <div className="slodkosci-posts">{posts}</div> :
+                    <WytrawnosciDetailedPost data={this.props.data}
+                                           index={this.state.indexClicked}
+                                           action={()=>this.setState({galleryOnOff: true})}/>}
         </section>
     }
 }

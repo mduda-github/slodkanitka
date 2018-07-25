@@ -1,6 +1,7 @@
 var path = require("path");
 var Html = require('html-webpack-plugin');
 var MiniCSS = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = function(env) {
@@ -56,11 +57,10 @@ module.exports = function(env) {
                 {
                     test: /\.(jpg|jpeg|gif|png|csv)$/,
                     use: {
-                        loader: 'file-loader',
+                        loader: 'file-loader?outputPath=images/',
                         options: {
                             name: '[name].[ext]',
-                            publicPath: 'images',
-                            outputPath: 'images'
+                            useRelativePath: true
                         }
                     }
                 },
@@ -84,7 +84,10 @@ module.exports = function(env) {
             }),
             new MiniCSS({
                 filename: "app.css", // definiujemy adres pliku css
-            })
+            }),
+            new CopyWebpackPlugin([
+                { from: 'images', to: 'images' },
+            ])
         ]
     }
 

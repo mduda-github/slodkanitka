@@ -1,15 +1,33 @@
 import React from 'react';
+import {LifestyleDetailedPost} from './section-lifestyle-post.jsx';
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+} from 'react-router-dom';
 
-
-class LifestylePosts extends React.Component {
-
+class LifestyleSection extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            indexClicked: '0',
+            galleryOnOff: true
+        }
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
     }
+
+    handleClick = (e, index) => {
+        this.setState({
+            indexClicked: index,
+            galleryOnOff: false
+        });
+        return <div/>
+    };
 
     render() {
         const sorted = [];
@@ -23,27 +41,20 @@ class LifestylePosts extends React.Component {
                             data-aos-duration={600 + i*300}
                             data-aos-easing="ease-in-sine"
                             className="slodkosci-post" key={i}>
-                    <img className="slodkosci-post-img"
-                         src={elem.content.image}
-                         onClick={e => this.handleClick(e, i)}/>
-                    <div className="slodkosci-post-title">{elem.content.title_image}</div>
+                    <Link to={`${this.props.routerProps.url}/${elem.content.title_post}`}>
+                        <img className="slodkosci-post-img"
+                             src={'https://' + elem.content.image}
+                             onClick={e => this.handleClick(e, i)}/>
+                        <div className="slodkosci-post-title">{elem.content.title_image}</div>
+                    </Link>
                 </div>
             });
-
-        return <div className="slodkosci-posts">{posts}</div>
-
-    }
-}
-
-class LifestyleSection extends React.Component {
-
-    render() {
-
         return <section className="slodkosci">
-            <div className="container">
-                <h1>Lifestyle</h1>
-                <LifestylePosts data={this.props.data}/>
-            </div>
+            <h1><Link to="/lifestyle">Lifestyle</Link></h1>
+            {this.state.galleryOnOff ? <div className="slodkosci-posts">{posts}</div> :
+                <LifestyleDetailedPost data={this.props.data}
+                                 index={this.state.indexClicked}
+                                 action={()=>this.setState({galleryOnOff: true})}/>}
         </section>
     }
 }

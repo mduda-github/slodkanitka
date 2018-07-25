@@ -29,24 +29,34 @@
   }
   .detailed-post-body {
     display: flex;
-    padding: 15px 0;
+    padding: 20px 0;
     border-bottom: 1px solid black;
+    @include tablet {
+      flex-direction: column;
+      padding: 20px 0;
+    }
     .detailed-post-body-left {
       //border: 1px solid green;
-      width: 50%;
+      width: 45%;
       display: flex;
       justify-content: center;
       align-items: center;
+      @include tablet {
+        width: 100%;
+        padding: 20px;
+      }
       img {
-        width: 500px;
-        height: 500px;
+        width: 100%;
       }
     }
 
     .detailed-post-body-right {
       //border: 1px solid purple;
-      width: 50%;
+      width: 55%;
       padding: 0 20px;
+      @include tablet {
+        width: 100%;
+      }
       h1 {
         text-align: left;
         padding: 0;

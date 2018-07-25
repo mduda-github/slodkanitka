@@ -1,6 +1,6 @@
 import React from 'react';
 import ReadMoreReact from 'read-more-react';
-import {SlodkosciDetailedPost} from './section-slodkosci-post.jsx'
+import {BlogDetailedPost} from './section-blog-post.jsx'
 import {
     HashRouter,
     Route,
@@ -44,18 +44,19 @@ class BlogSection extends React.Component {
                     <hr/>
                     <p>{elem.content.tags}</p>
                     <Link to={`${this.props.routerProps.url}/${elem.content.title_post}`}>
-                    <img src={elem.content.image}/>
+                    <img onClick={(e) => {this.handleClick(e, i)}}
+                         src={'https://' + elem.content.image}/>
                     <ReadMoreReact text={elem.content.text_post}
                                    max={400} />
                     </Link>
                 </div>
             });
         return <section className="blog">
-            <h1 className="blog-title" >Nasz Blog</h1>
+            <h1 className="blog-title" ><Link to="/blog">Nasz Blog</Link></h1>
 
                         {this.state.galleryOnOff ? <div className="blog-section">
                             {posts}
-                        </div> : <SlodkosciDetailedPost data={this.props.data}
+                        </div> : <BlogDetailedPost data={this.props.data}
                                                         index={this.state.indexClicked}
                                                         action={()=>this.setState({galleryOnOff: true})}
                         />}

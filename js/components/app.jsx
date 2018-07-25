@@ -32,6 +32,11 @@ import {LifestyleSection} from './body/section-lifestyle.jsx'
 import {BlogSection} from './body/section-blog.jsx'
 
 import {SlodkosciDetailedPost} from './body/section-slodkosci-post.jsx'
+import {WytrawnosciDetailedPost} from './body/section-wytrawnosci-post.jsx'
+import {NitkaDetailedPost} from './body/section-nitka-post.jsx'
+import {DiyDetailedPost} from './body/section-diy-post.jsx'
+import {LifestyleDetailedPost} from './body/section-lifestyle-post.jsx'
+import {BlogDetailedPost} from './body/section-blog-post.jsx'
 
 
 class App extends React.Component {
@@ -58,12 +63,12 @@ class App extends React.Component {
                 <Header />
             <Switch>
                 <Route exact path='/' component={Body} />
-                <Route path='/blog' component={(props) => <SlodkosciSection
+                <Route path='/blog' component={(props) => <BlogSection
                     routerProps={props.match}
                     data={this.state.data}/>} />
 
                 <Route path="/blog/:id" component={ () => {
-                    return <SlodkosciDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
+                    return <BlogDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
 
                 <Route path='/contact' component={ContactSection} />
                 <Route path='/aboutus' component={AboutUsSection} />
@@ -71,14 +76,33 @@ class App extends React.Component {
                 <Route path='/slodkosci' component={(props) => <SlodkosciSection
                     routerProps={props.match}
                     data={this.state.data}/>} />
-
                 <Route path="/slodkosci/:id" component={ () => {
                     return <SlodkosciDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
 
-                <Route path='/wytrawnosci' component={() => <WytrawnosciSection data={this.state.data}/>}/>
-                <Route path='/nitka' component={() => <NitkaSection data={this.state.data}/>}/>
-                <Route path='/diy' component={() => <DiySection data={this.state.data}/>}/>
-                <Route path='/lifestyle' component={() => <LifestyleSection data={this.state.data}/>}/>
+                <Route path='/wytrawnosci' component={(props) => <WytrawnosciSection
+                    routerProps={props.match}
+                    data={this.state.data}/>} />
+                <Route path="/wytrawnosci/:id" component={ () => {
+                    return <WytrawnosciDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
+
+                <Route path='/nitka' component={(props) => <NitkaSection
+                    routerProps={props.match}
+                    data={this.state.data}/>} />
+                <Route path="/nitka/:id" component={ () => {
+                    return <NitkaDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
+
+                <Route path='/diy' component={(props) => <DiySection
+                    routerProps={props.match}
+                    data={this.state.data}/>} />
+                <Route path="/diy/:id" component={ () => {
+                    return <DiyDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
+
+                <Route path='/lifestyle' component={(props) => <LifestyleSection
+                    routerProps={props.match}
+                    data={this.state.data}/>} />
+                <Route path="/lifestyle/:id" component={ () => {
+                    return <LifestyleDetailedPost data={this.props.data} index={this.state.indexClicked} />}}/>
+
                 <Route component={Main404} />
             </Switch>
                 <Footer />

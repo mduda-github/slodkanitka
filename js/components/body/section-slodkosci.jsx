@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 
 class SlodkosciSection extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -18,26 +17,19 @@ class SlodkosciSection extends React.Component {
         }
     }
 
-
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
     handleClick = (e, index) => {
-        console.log('Kliknięto:', index);
         this.setState({
             indexClicked: index,
             galleryOnOff: false
         });
-        console.log(this.state.indexClicked);
         return <div/>
     };
 
-
-
     render() {
-
-        console.log(this.props.postsOnOff);
         const sorted = [];
         this.props.data.length > 0 &&
         this.props.data.forEach((item) => {
@@ -51,27 +43,18 @@ class SlodkosciSection extends React.Component {
                             className="slodkosci-post" key={i}>
                     <Link to={`${this.props.routerProps.url}/${elem.content.title_post}`}>
                         <img className="slodkosci-post-img"
-                             src={elem.content.image}
-                             onClick={(e) => {this.handleClick(e, i)}}
-                        />
+                             src={'https://' + elem.content.image}
+                             onClick={(e) => {this.handleClick(e, i)}}/>
                         <div className="slodkosci-post-title">{elem.content.title_image}</div>
                     </Link>
                 </div>
             });
-
         return <section className="slodkosci">
-                <h1>Nasze słodkości</h1>
-
-                {/*<SlodkosciPosts data={this.props.data}/>*/}
-                {/*<div style={{display: this.state.postsOnOff}} className="slodkosci-posts">*/}
-                    {/*{posts}*/}
-                {/*</div>*/}
-                {this.state.galleryOnOff ? <div className="slodkosci-posts">
-                    {posts}
-                </div> : <SlodkosciDetailedPost data={this.props.data}
-                                                index={this.state.indexClicked}
-                                                action={()=>this.setState({galleryOnOff: true})}
-                />}
+                <h1><Link to='/slodkosci'>Nasze słodkości</Link></h1>
+                {this.state.galleryOnOff ? <div className="slodkosci-posts">{posts}</div> :
+                    <SlodkosciDetailedPost data={this.props.data}
+                                           index={this.state.indexClicked}
+                                           action={()=>this.setState({galleryOnOff: true})}/>}
         </section>
     }
 }

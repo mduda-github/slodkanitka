@@ -6,8 +6,16 @@
 .header-nav {
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   height: 200px;
+  width: 100%;
+  @include tablet {
+    font-size: 1.5em;
+    height: 180px;
+  }
+  @include mobile {
+    height: 100px;
+  }
 
   div {
     display: flex;
@@ -51,6 +59,13 @@
     li {
       margin-left: 1rem;
     }
+    @include tablet {
+      width: 35%;
+    }
+    @include mobile {
+      display: none;
+      width: 0;
+    }
   }
 
   .header-nav-right {
@@ -58,6 +73,12 @@
     justify-content: flex-start;
     li {
       margin-right: 1rem;
+    }
+    @include tablet {
+      width: 35%;
+    }
+    @include mobile {
+      display: none;
     }
   }
 
@@ -67,11 +88,22 @@
     img {
       width: 100%;
     }
+    @include tablet {
+      width: 25%;
+    }
+    @include mobile {
+      width: 100%;
+      justify-content: space-between;
+      padding-left: 10px;
+    }
     .logo {
       height: 10rem;
       width: 10rem;
       z-index: 1;
-
+      @include mobile {
+        height: 5rem;
+        width: 5rem;
+      }
       a {
         text-decoration: none;
         color: white;
@@ -80,10 +112,47 @@
       a:hover {
         transform: scale(1.02);
       }
-      p {
-        font-size: 2.8rem;
-        line-height: 40px;
-        text-align: center;
+    }
+    .hamburgerMenu {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      width: 70px;
+      z-index: 2;
+      @include mobile {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+      }
+    img {
+      width: 50%;
+      height: 50%;
+    }
+
+    }
+  }
+  .header-nav-mobile {
+    display: none;
+    opacity: 0;
+    li {
+      width: 100%;
+      list-style: none;
+    }
+    @include mobile {
+      transition: all 300ms;
+      opacity: 1;
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 114px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      background-color: white;
+      text-align: right;
+      z-index: 1;
+      li {
+        padding: 3px 0;
       }
     }
   }

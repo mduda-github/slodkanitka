@@ -7,7 +7,7 @@ class MainText extends React.Component {
             <div className="container">
                 <div className="main-text-right">
                     <div className="logo">
-                        <img src="./../../../images/logo.png"/>
+                        <img src="./images/logo.png"/>
                     </div>
                 </div>
                 <div className="main-text-left">
