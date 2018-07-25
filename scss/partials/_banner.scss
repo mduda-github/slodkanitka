@@ -8,6 +8,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  @include mobile {
+    background-position: bottom;
+  }
+  @include tablet {
+    background-position: bottom;
+  }
 
   .container {
     padding-top: 120px;

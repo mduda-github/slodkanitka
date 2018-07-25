@@ -154,6 +154,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
+  @media all and (max-width: 720px) {
+    .main-banner {
+      background-position: bottom; } }
+  @media all and (max-width: 990px) {
+    .main-banner {
+      background-position: bottom; } }
   .main-banner .container {
     padding-top: 120px;
     padding-left: 30px; }
@@ -362,6 +368,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
+  @media all and (max-width: 720px) {
+    .main-banner2 {
+      background-position: bottom; } }
+  @media all and (max-width: 990px) {
+    .main-banner2 {
+      background-position: bottom; } }
   .main-banner2 .container {
     padding-top: 120px;
     padding-left: 30px; }
@@ -536,11 +548,17 @@ body {
     @media all and (max-width: 720px) {
       .aboutus h1 {
         font-size: 3em; } }
+    @media all and (max-width: 990px) {
+      .aboutus h1 {
+        font-size: 3em; } }
   .aboutus .aboutus-text {
     display: flex;
     justify-content: center;
     align-items: center; }
     @media all and (max-width: 720px) {
+      .aboutus .aboutus-text {
+        flex-direction: column; } }
+    @media all and (max-width: 990px) {
       .aboutus .aboutus-text {
         flex-direction: column; } }
     .aboutus .aboutus-text img {
@@ -552,9 +570,16 @@ body {
         .aboutus .aboutus-text img {
           width: 40%;
           height: 40%; } }
+      @media all and (max-width: 990px) {
+        .aboutus .aboutus-text img {
+          width: 40%;
+          height: 40%; } }
     .aboutus .aboutus-text .aboutus-img-1 {
       margin-right: 25px; }
       @media all and (max-width: 720px) {
+        .aboutus .aboutus-text .aboutus-img-1 {
+          margin-right: 0; } }
+      @media all and (max-width: 990px) {
         .aboutus .aboutus-text .aboutus-img-1 {
           margin-right: 0; } }
     .aboutus .aboutus-text .aboutus-img-2 {
@@ -562,11 +587,16 @@ body {
       @media all and (max-width: 720px) {
         .aboutus .aboutus-text .aboutus-img-2 {
           margin-left: 0; } }
+      @media all and (max-width: 990px) {
+        .aboutus .aboutus-text .aboutus-img-2 {
+          margin-left: 0; } }
     .aboutus .aboutus-text p {
       font-size: 1.2rem;
       line-height: 35px;
       padding: 40px 0;
-      text-align: justify; }
+      text-align: justify;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100; }
       .aboutus .aboutus-text p strong {
         color: #4c9d92;
         font-size: 1.3rem; }
@@ -575,7 +605,15 @@ body {
           line-height: 25px;
           font-family: 'Raleway', sans-serif;
           font-weight: 100; } }
+      @media all and (max-width: 990px) {
+        .aboutus .aboutus-text p {
+          line-height: 25px;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 100; } }
   @media all and (max-width: 720px) {
+    .aboutus .reverse {
+      flex-direction: column-reverse; } }
+  @media all and (max-width: 990px) {
     .aboutus .reverse {
       flex-direction: column-reverse; } }
 
