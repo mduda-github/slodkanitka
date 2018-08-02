@@ -1,5 +1,5 @@
 .main-instagram {
-  height: 400px;
+  max-height: 420px;
   color: map-get($colors, text2-color);
   border-top: 1px solid map-get($colors, border-color-darker);
   border-bottom: 1px solid map-get($colors, border-color-darker);
@@ -9,21 +9,65 @@
   background-attachment: fixed;
 
   @include tablet {
-    height: 350px;
+    max-height: 390px;
   }
   @include mobile {
-    height: 300px;
+    max-height: 300px;
   }
-
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   h1 {
     text-align: center;
     color: white;
     font-size: 2em;
     text-shadow: 1px 0 rgba(0,0,0,0.4);
-    padding: 20px 0;
+    padding: 3% 0;
     @include tablet {
-      padding: 30px 0;
+      padding: 3% 0;
       font-size: 1.8em;
+    }
+    @include mobile {
+      font-size: 1.2em;
+    }
+  }
+  $lg: 0;
+  #instafeed {
+    max-width:1080px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 50%;
+      background: white;
+      margin: 3% 0;
+
+      @media only screen and (min-width: $lg) {
+        width: 25%;
+        margin: 3% 0;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);
+        border: 2px solid white;
+        transition: all 300ms;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
     }
   }
 
@@ -31,42 +75,10 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 30px 0;
+    margin: 3% 0;
 
 
-    .main-instagram-list__el {
-      box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);
-      height: 250px;
-      width: 250px;
-      @include tablet {
-        height: 200px;
-        width: 200px;
-      }
-      @include mobile {
-        height: 100px;
-        width: 100px;
-      }
 
-
-      img {
-        border: 2px solid white;
-        height: 250px;
-        width: 250px;
-        transition: all 300ms;
-        @include tablet {
-          height: 200px;
-          width: 200px;
-        }
-        @include mobile {
-          height: 100px;
-          width: 100px;
-        }
-      }
-      img:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-      }
-    }
     //.main-instagram-list__el:last-child {
     //  @include mobile {
     //    display: none;

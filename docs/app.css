@@ -259,7 +259,7 @@ body {
       font-weight: bold; }
 
 .main-instagram {
-  height: 400px;
+  max-height: 420px;
   color: #ffffff;
   border-top: 1px solid rgba(88, 201, 185, 0.5);
   border-bottom: 1px solid rgba(88, 201, 185, 0.5);
@@ -269,53 +269,60 @@ body {
   background-attachment: fixed; }
   @media all and (max-width: 990px) {
     .main-instagram {
-      height: 350px; } }
+      max-height: 390px; } }
   @media all and (max-width: 720px) {
     .main-instagram {
-      height: 300px; } }
+      max-height: 300px; } }
+  .main-instagram .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .main-instagram h1 {
     text-align: center;
     color: white;
     font-size: 2em;
     text-shadow: 1px 0 rgba(0, 0, 0, 0.4);
-    padding: 20px 0; }
+    padding: 3% 0; }
     @media all and (max-width: 990px) {
       .main-instagram h1 {
-        padding: 30px 0;
+        padding: 3% 0;
         font-size: 1.8em; } }
+    @media all and (max-width: 720px) {
+      .main-instagram h1 {
+        font-size: 1.2em; } }
+  .main-instagram #instafeed {
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; }
+    .main-instagram #instafeed a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 50%;
+      background: white;
+      margin: 3% 0; }
+      @media only screen and (min-width: 0) {
+        .main-instagram #instafeed a {
+          width: 25%;
+          margin: 3% 0; } }
+      .main-instagram #instafeed a img {
+        display: block;
+        width: 100%;
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+        border: 2px solid white;
+        transition: all 300ms; }
+      .main-instagram #instafeed a img:hover {
+        transform: scale(1.1);
+        cursor: pointer; }
   .main-instagram .main-instagram-list {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 30px 0; }
-    .main-instagram .main-instagram-list .main-instagram-list__el {
-      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
-      height: 250px;
-      width: 250px; }
-      @media all and (max-width: 990px) {
-        .main-instagram .main-instagram-list .main-instagram-list__el {
-          height: 200px;
-          width: 200px; } }
-      @media all and (max-width: 720px) {
-        .main-instagram .main-instagram-list .main-instagram-list__el {
-          height: 100px;
-          width: 100px; } }
-      .main-instagram .main-instagram-list .main-instagram-list__el img {
-        border: 2px solid white;
-        height: 250px;
-        width: 250px;
-        transition: all 300ms; }
-        @media all and (max-width: 990px) {
-          .main-instagram .main-instagram-list .main-instagram-list__el img {
-            height: 200px;
-            width: 200px; } }
-        @media all and (max-width: 720px) {
-          .main-instagram .main-instagram-list .main-instagram-list__el img {
-            height: 100px;
-            width: 100px; } }
-      .main-instagram .main-instagram-list .main-instagram-list__el img:hover {
-        transform: scale(1.1);
-        cursor: pointer; }
+    margin: 3% 0; }
   .main-instagram .banner-filter {
     background-color: rgba(88, 201, 185, 0.5); }
 
@@ -529,7 +536,6 @@ body {
     margin-left: 25px;
     height: 21px; }
   .form-container .form-input-submit {
-    width: 120px;
     border: 2px solid #4c9d92;
     background-color: white;
     color: #4c9d92;

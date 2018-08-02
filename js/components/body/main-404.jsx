@@ -1,12 +1,4 @@
 import React from 'react';
-import data from '../../../data/data';
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-} from 'react-router-dom';
 
 class Main404 extends React.Component {
 

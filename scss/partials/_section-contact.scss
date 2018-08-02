@@ -74,7 +74,7 @@
     height: 21px;
   }
   .form-input-submit {
-    width: 120px;
+    //min-width: 120px;
     border: 2px solid map-get($colors, main-color);
     background-color: white;
     color: map-get($colors, main-color);

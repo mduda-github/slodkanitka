@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    BrowserRouter,
     HashRouter,
     Route,
     Link,
@@ -58,7 +59,7 @@ class App extends React.Component {
     }
     render() {
         // console.log(this.state.data);
-        return <HashRouter>
+        return <BrowserRouter>
             <div>
                 <Header />
             <Switch>
@@ -107,7 +108,7 @@ class App extends React.Component {
             </Switch>
                 <Footer />
             </div>
-        </HashRouter>
+        </BrowserRouter>
     }
 }
 
